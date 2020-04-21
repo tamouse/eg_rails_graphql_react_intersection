@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails app implementing the canonical "mini-blogger" site with users, posts, and comments.
 
-Things you may want to cover:
+## Installation ##
 
-* Ruby version
+### Prerequesites ###
 
-* System dependencies
+* Postgresql. On Mac: `brew install postgresql` (Version doesn't matter so much, probably anyting >= 9.2)
 
-* Configuration
+### Setup ###
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Run the setup script: `./scripts/setup.sh`
