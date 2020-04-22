@@ -11,3 +11,14 @@ Rails app implementing the canonical "mini-blogger" site with users, posts, and 
 ### Setup ###
 
 * Run the setup script: `./scripts/setup.sh`
+
+
+## Development Steps ##
+
+- [x] integrate bootstrap
+- [x] User model, sign up
+- [x] Sessions, log in, log out
+- [ ] set up authorization with Pundit
+- [ ] Posts model
+- [ ] Root page shows public (published) Posts
+- [ ] Comments model

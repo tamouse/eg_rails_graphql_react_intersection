@@ -1,0 +1,14 @@
+
+<%= form_tag sessions_path do %>
+  <div class="form-group">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email], class: "form-control", autofocus: true %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :password %>
+    <%= text_field_tag :password, params[:password], class: "form-control" %>
+  </div>
+
+  <%= submit_tag "Log in",  class: "btn btn-primary" %>
+<% end %>

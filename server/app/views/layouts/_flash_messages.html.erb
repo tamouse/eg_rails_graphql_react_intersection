@@ -1,0 +1,12 @@
+<%# Display the flash message in the page header %>
+<% unless flash.empty? %>
+  <% flash.each do |key, message| %>
+    <% style = flash_style_type(key) %>
+    <div class="alert alert-<%= style %> alert-dismissible fade show" role="alert">
+      <%= message %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,11 @@
+<%# model is the form model and must be passed as a local %>
+<% if model.errors.any? %>
+  <div class="error_messages">
+    <h2>Form is invalid</h2>
+    <ul>
+      <% model.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
