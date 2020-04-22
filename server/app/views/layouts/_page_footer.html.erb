@@ -1,14 +1,17 @@
-<footer>
+<footer class="d-flex justify-content-between align-items-center border-top">
   <% if current_user %>
-    <p>
-      Logged in as <%= current_user.handle %>.
-      <%= link_to "Log out", logout_url, class: "btn btn-primary" %>
-    </p>
+    <div>
+      <small>
+        Logged in as
+        <%= link_to current_user.handle, user_url(current_user) %>.</small></div>
+    <div class="btn-group" role="group">
+      <%= link_to "Log out", logout_url, class: "btn btn-sm btn-primary" %>
+    </div>
   <% else %>
-    <p>
-      Not logged in.
-      <%= link_to "Log in", login_url, class: "btn btn-primary" %>
-      <%= link_to "Sign up", signup_url, class: "btn btn-secondary" %>
-    </p>
+    <div><small>Not logged in.</small></div>
+    <div class="btn-group" role="group">
+      <%= link_to "Log in", login_url, class: "btn btn-sm btn-primary" %>
+      <%= link_to "Sign up", signup_url, class: "btn btn-sm btn-secondary" %>
+    </div>
   <% end %>
 </footer>

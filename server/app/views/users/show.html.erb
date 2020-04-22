@@ -1,4 +1,14 @@
-<p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="card">
+  <div class="card-body">
+    <h3>User <%= @user.handle %></h3>
+    <p>Email: <%= @user.email %></p>
+    <p>Joined: <%= @user.created_at.to_s %></p>
+  </div>
+  <div class="card-footer d-flex flex-row-reverse">
+    <div class="button-group">
+      <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-secondary" %>
+      <%= link_to 'Users', users_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>
