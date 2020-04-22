@@ -55,5 +55,9 @@ RSpec.describe UserPolicy, type: :policy do
     it "non-admin users cannot delete another user" do
       expect(subject).not_to permit(user1, user1)
     end
+    it "admin cannot delete themselves" do
+      expect(subject).not_to permit(admin, admin)
+    end
+
   end
 end

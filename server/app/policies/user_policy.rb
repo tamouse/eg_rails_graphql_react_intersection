@@ -13,4 +13,8 @@ class UserPolicy < ApplicationPolicy
     super || (record.persisted? && user == record)
   end
 
+  def destroy?
+    super && user != record
+  end
+
 end
