@@ -18,7 +18,7 @@ Rails app implementing the canonical "mini-blogger" site with users, posts, and 
 - [x] integrate bootstrap
 - [x] User model, sign up
 - [x] Sessions, log in, log out
-- [ ] set up authorization with Pundit
+- [x] set up authorization with Pundit
 - [ ] Posts model
 - [ ] Root page shows public (published) Posts
 - [ ] Comments model
