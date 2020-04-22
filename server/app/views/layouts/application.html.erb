@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Server</title>
+    <title>Miniblog Example</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield :head_area %>
   </head>
 
-  <body>
+  <body class="container">
+    <%= render template: "layouts/_page_header" %>
     <%= yield %>
+    <%= render template: "layouts/_page_footer" %>
+    <%= yield :javascript %>
+    <%= render template: "layouts/_debug" %>
   </body>
 </html>
