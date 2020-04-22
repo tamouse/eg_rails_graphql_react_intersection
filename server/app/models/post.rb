@@ -5,6 +5,9 @@ class Post < ApplicationRecord
   validates_presence_of :content
   validates_presence_of :author
 
+  scope :published, -> { where(published: true) }
+  scope :drafts, -> { where(published: false) }
+
   def publish!
     self.published = true
     save!

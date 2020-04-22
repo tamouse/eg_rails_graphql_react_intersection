@@ -23,6 +23,25 @@ RSpec.describe Post, type: :model do
     end
   end
 
+  describe 'scopes' do
+    let!(:user) { Fabricate(:user) }
+    before do
+      Fabricate.times(4, :post, published: true, author: user)
+      Fabricate.times(2, :post, published: false, author: user)
+    end
+
+    describe 'published' do
+      it "should have 4 posts" do
+        expect(user.posts.published.count).to eq(4)
+      end
+    end
+    describe 'drafts' do
+      it "should have 2 posts" do
+        expect(user.posts.drafts.count).to eq(2)
+      end
+    end
+  end
+
   describe '#publish!' do
     let!(:post) {Fabricate(:post)}
     it "sets the published flag to true" do
