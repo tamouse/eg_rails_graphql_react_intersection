@@ -5,7 +5,7 @@
         Logged in as
         <%= link_to current_user.handle, user_url(current_user) %>.</small></div>
     <div class="btn-group" role="group">
-      <%= link_to "Log out", logout_url, class: "btn btn-sm btn-primary" %>
+      <%= link_to "Log out", logout_url, class: "btn btn-sm btn-light" %>
     </div>
   <% else %>
     <div><small>Not logged in.</small></div>

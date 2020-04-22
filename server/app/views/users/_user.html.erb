@@ -1,0 +1,7 @@
+<tr>
+  <td><%= user.handle %></td>
+  <td><%= user.email %></td>
+  <td><%= link_to_if (policy(user).show?), 'Show', user %></td>
+  <td><%= link_to_if (policy(user).edit?), 'Edit', edit_user_path(user) %></td>
+  <td><%= link_to_if (policy(user).destroy?), 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
