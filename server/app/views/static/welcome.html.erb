@@ -1,7 +1,6 @@
-
-<div id="main" class="some_class" role="main">
-  <div class="container">
-    <h2>Welcome</h2>
-    <p>To be filled in, soon.</p>
-  </div>
-</div>
+<%= content_for :content_title do || %>
+  <h2>Welcome</h2>
+<% end %> %>
+<%= content_for :content_body do || %>
+  <%= render 'published_posts' %>
+<% end %> %>
