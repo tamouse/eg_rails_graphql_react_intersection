@@ -7,6 +7,8 @@ An example repo to show the following:
 3. adding an ApolloServer layer that transforms the Rails app into a GraphQL API
 4. a single page React app that using ApolloClient to interact with the GraphQL API
 
+[Info Page](https://www.notion.so/tamouse/Adding-graphql-server-to-an-existing-RESTful-Rails-app-992e0e29d0024396a19f87a018453616)
+
 ## Installation
 
 ### Prerequisites ###
