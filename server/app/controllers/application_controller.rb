@@ -13,6 +13,14 @@ class ApplicationController < ActionController::Base
     redirect_to login_url, alert: "Not authorized" unless current_user.nil?
   end
 
+  def superadmin
+    User.admins.order(created_at: :asc).take(1)
+  end
+
+  def superadmin?
+    current_user.present? && current_user.id = superamdin&.id
+  end
+
   private
 
   def user_not_authorized

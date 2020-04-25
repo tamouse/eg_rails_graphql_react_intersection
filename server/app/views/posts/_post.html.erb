@@ -1,0 +1,22 @@
+<tr>
+  <td><%= post.title %></td>
+  <td><%= post.content %></td>
+  <% if current_user == @author %>
+    <td><%= post.published %></td>
+  <% end %>
+  <td>
+    <% if policy(post).show? %>
+      <%= link_to 'Show', post %>
+    <% end %>
+  </td>
+  <td>
+    <% if policy(post).edit? %>
+      <%= link_to 'Edit', edit_user_post_path(post, user_id: current_user&.id) %>
+    <% end %>
+  </td>
+  <td>
+    <% if policy(post).destroy? %>
+      <%= link_to 'Destroy', user_post_path(post, user_id: current_user.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </td>
+</tr>

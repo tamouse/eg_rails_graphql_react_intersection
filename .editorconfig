@@ -1,4 +1,6 @@
 # EditorConfig is awesome: http://EditorConfig.org
+# Sample (and default) .editorconfig file for projects
+
 # top-most EditorConfig file
 root = true
 
@@ -9,12 +11,8 @@ insert_final_newline = true
 charset = utf-8
 indent_style = space
 indent_size = 2
-trim_trailing_whitespace = true
-
-[*.md, *.markdown, *.mdx]
-trim_trailing_whitespace = false
 
 # Tab indentation (no size specified)
 [Makefile]
 indent_style = tab
-tab_width = 8
+indent_size = 1

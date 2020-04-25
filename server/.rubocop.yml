@@ -1,0 +1,15 @@
+
+Layout/LineLength:
+  Max: 100
+  
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+  
+Style/StringLiterals:
+  Enabled: false
+  
+Style/SymbolArray:
+  Enabled: false
