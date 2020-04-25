@@ -1,0 +1,19 @@
+<%= content_for :content_title do %>
+  <%= @post.title %>
+<% end %>
+
+<%= content_for :content_body do %>
+  <%= @post.content %>
+<% end %>
+
+<%= content_for :content_footer do %>
+  <div class="button-group">
+    <% if current_user.present? %>
+      <%= link_to 'Edit', edit_user_post_path(@post, user_id: current_user.id), class: "btn btn-primary" %>
+      <%= link_to 'Posts', user_posts_path(user_id: current_user.id), class: "btn btn-secondary" %>
+    <% else %>
+      <%= link_to 'Posts', posts_path, class: "btn btn-secondary" %>
+    <% end %>
+  </div>
+<% end %>
+

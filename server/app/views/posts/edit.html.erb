@@ -1,0 +1,16 @@
+<%= content_for :content_title do %>
+Editing Post
+<% end %>
+
+<%= content_for :content_body do %>
+  <%= render 'form', post: @post %>
+<% end %> %>
+
+<%= content_for :content_footer do || %>
+  <div class="d-flex flex-row-reverse">
+    <div class="btn-group">
+      <%= link_to 'Show', @post, class: "btn btn-secondary" %>
+      <%= link_to 'Posts', user_posts_path(user_id: current_user?.id), class: "btn btn-secondary" %>
+    </div>
+  </div>
+<% end %> %>

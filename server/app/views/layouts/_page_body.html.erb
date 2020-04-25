@@ -1,0 +1,17 @@
+<main class="card" role="main">
+  <% if content_for?(:content_title) %>
+    <header class="card-header">
+      <%= yield(:content_title) %>
+    </header>
+  <% end %>
+  <section class="card-body">
+    <%= content_for?(:content_body) ? yield(:content_body) : yield %>
+  </section>
+  <% if content_for?(:content_footer) %>
+    <header class="card-footer">
+      <%= yield(:content_footer) %>
+    </header>
+  <% end %>
+</main>
+
+

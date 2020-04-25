@@ -1,7 +1,11 @@
 <% if Rails.env.development? %>
   <hr />
-  <h3>Debugging info:</h3>
-  <ul>
-    <li>session[:user_id]: '<%= session[:user_id] || "nil" %>' </li>
-  </ul>
+  <pre>
+    <code>
+      DEBUGGING
+      =========
+
+      session[:user_id]: <%= session[:user_id] %>
+    </code>
+  </pre>
 <% end %>
